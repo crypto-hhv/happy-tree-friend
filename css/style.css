@@ -1,0 +1,343 @@
+@font-face {
+	font-family: VT323;
+	src: url(../fonts/VT323-Regular.ttf);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box; /* 1 */
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+img {
+	vertical-align: middle;
+	border-style: none; /* Remove the border on images inside links in IE 10-. */
+}
+html {
+	font-family: VT323;
+	line-height: 1.2;
+	font-size: 0.520833333vw;
+}
+body {
+	margin: 0;
+	font-family: VT323;
+	font-size: 2rem;
+	font-weight: normal;
+	line-height: 1.2;
+	color: #ffffff;
+	background-color: #030503;
+}
+main {
+	overflow: hidden;
+}
+/******************************************************************/
+.btn {
+	font-size: 3.8rem;
+	background: #9fcd03;
+	color: #000;
+	box-shadow: -0.3rem 0.3rem 2rem #9fcd03, inset 0.3rem -0.3rem 1rem #f2c22a;
+	border-radius: 0.5rem;
+	padding: 0.2rem 2rem;
+	display: inline-block;
+	transition: all ease 0.4s;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+}
+.btn:hover {
+	box-shadow: -0.5rem 0.5rem 2rem #9fcd03, inset 0.5rem -0.5rem 1rem #f2c22a;
+	transform: scale(0.95);
+}
+.container {
+	width: 136.6rem;
+	margin: 0 auto;
+}
+.title {
+	font-size: 9rem;
+	display: flex;
+	margin-bottom: 3rem;
+}
+.title::before {
+	content: "";
+	display: inline-block;
+	width: 7.4rem;
+	height: 7.4rem;
+	background-image: url(../images/title.png);
+	background-size: 100% 100%;
+	margin-right: 1.5rem;
+	margin-top: 2.4rem;
+}
+.title.right {
+	text-align: right;
+	flex-direction: row-reverse;
+}
+.title.right::before {
+	margin-left: 1.5rem;
+	margin-right: 0;
+}
+@keyframes up-down-animation {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-1.5rem);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(1.5rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes up-down-reverse-animation {
+	0% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(1.5rem);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(-1.5rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+/******************************************************************/
+.header {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 12.3rem;
+	padding: 0 15rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all ease 0.4s;
+}
+.header .logo img {
+	width: 23.3rem;
+}
+.header.sticky {
+	height: 10rem;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+.section-banner {
+	position: relative;
+}
+.section-banner .main-image {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+}
+.section-banner .moon {
+	position: absolute;
+	z-index: 5;
+	width: 91.7rem;
+	top: -5rem;
+	left: 110rem;
+}
+.section-banner .moon img {
+	width: 100%;
+	animation: up-down-animation 10s linear infinite;
+}
+.section-banner .land {
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	right: 0;
+	bottom: -33rem;
+}
+.section-banner .land img {
+	width: 100%;
+	animation: up-down-reverse-animation 10s linear infinite;
+}
+.section-banner .land .land-img {
+	position: relative;
+	z-index: 20;
+}
+@keyframes candy-animation {
+	0% {
+		transform-origin: bottom center;
+		transform: rotate(0deg);
+	}
+	25% {
+		transform-origin: bottom center;
+		transform: rotate(5deg);
+	}
+	50% {
+		transform-origin: bottom center;
+		transform: rotate(0deg);
+	}
+	75% {
+		transform-origin: bottom center;
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform-origin: bottom center;
+		transform: rotate(0deg);
+	}
+}
+.section-banner .candy-1 {
+	position: absolute;
+	width: 16rem;
+	bottom: 43rem;
+	left: 20rem;
+	z-index: 14;
+	animation: candy-animation 3s linear infinite;
+}
+.section-banner .candy-2 {
+	position: absolute;
+	width: 10rem;
+	bottom: 36rem;
+	right: 20rem;
+	z-index: 14;
+	animation: candy-animation 3s linear infinite;
+}
+.section-banner .content {
+	width: 67.4rem;
+	position: absolute;
+	left: 85rem;
+	top: 6rem;
+	z-index: 15;
+}
+.section-banner .content img {
+	width: 100%;
+}
+.section-banner .content .description {
+	width: 49rem;
+	margin: -3.5rem auto 3.5rem;
+	color: #bdf304;
+	text-align: justify;
+	text-transform: uppercase;
+}
+.section-banner .content .btns {
+	width: 49rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.section-banner .content .btn {
+	width: 22rem;
+}
+.section-1 {
+	position: relative;
+	z-index: 20;
+	padding-top: 13rem;
+	padding-bottom: 9rem;
+}
+.section-1 .content {
+	width: 81rem;
+}
+.section-1 .content .description {
+	margin-bottom: 8rem;
+}
+.section-1 .content .btn {
+	min-width: 20rem;
+	margin-right: 4rem;
+}
+.section-1 .img {
+	width: 73rem;
+	position: absolute;
+	top: 7rem;
+	right: -7rem;
+}
+.section-1 .img img {
+	width: 100%;
+}
+.section-2 {
+	background-image: url(../images/bg-1.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem 0 4.5rem;
+}
+.section-2 .content {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -2.2rem -3.5rem;
+}
+.section-2 .content .item {
+	position: relative;
+	width: 50%;
+	padding: 2.2rem 3.5rem;
+}
+.section-2 .content .item .text {
+	padding: 1.8rem 8rem 2rem;
+	background: #2b3701;
+	border: 1px solid #b7e808;
+	border-radius: 2rem;
+	box-shadow: inset 0.8rem -0.8rem rgba(0, 0, 0, 0.4);
+	height: 100%;
+}
+.section-2 .content .item .icon {
+	width: 34rem;
+	position: absolute;
+	top: 50%;
+	left: -13rem;
+	transform: translateY(-50%);
+}
+.section-3 {
+	padding: 5rem 0 10rem;
+}
+.section-3 .content {
+	width: 60rem;
+	margin-left: auto;
+}
+.section-3 .content .description {
+	text-align: right;
+	margin-bottom: 6rem;
+}
+.section-3 .content .btns {
+	text-align: right;
+}
+.section-3 .content .btn {
+	min-width: 20rem;
+	margin-left: 4rem;
+}
+.footer {
+	height: 57rem;
+	background-image: url(../images/footer.jpg);
+	background-position: center;
+	background-size: cover;
+	padding-top: 2rem;
+}
+.footer .footer-title {
+	font-size: 9rem;
+	margin-bottom: 0rem;
+	text-align: center;
+}
+.footer .socials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer .socials .item {
+	padding: 0 1.5rem;
+}
+.footer .socials .item img {
+	width: 6.1rem;
+	transition: all ease 0.4s;
+}
+.footer .socials .item img:hover {
+	transform: scale(0.9);
+}
