@@ -240,6 +240,16 @@ main {
 .section-banner .content .btn {
 	width: 22rem;
 }
+.section-banner .main-animation {
+	position: absolute;
+	z-index: 20;
+	bottom: -20rem;
+	left: 30rem;
+}
+.section-banner .main-animation lottie-player {
+	width: 50rem;
+	height: 80rem;
+}
 .section-1 {
 	position: relative;
 	z-index: 20;

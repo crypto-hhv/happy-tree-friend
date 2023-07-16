@@ -176,15 +176,15 @@
 
 @keyframes showDownLong {
 	0% {
-		transform: translateY(-20rem);
+		transform: translateY(-40rem);
 	}
 	100% {
 		transform: translateY(0);
 	}
 }
 .showDownLong {
-	-webkit-transform: translateY(-20rem);
-	transform: translateY(-20rem);
+	-webkit-transform: translateY(-40rem);
+	transform: translateY(-40rem);
 }
 .showDownLong.go {
 	-webkit-animation-name: showDownLong;
@@ -193,15 +193,15 @@
 
 @keyframes showUpLong {
 	0% {
-		transform: translateY(20rem);
+		transform: translateY(40rem);
 	}
 	100% {
 		transform: translateY(0);
 	}
 }
 .showUpLong {
-	-webkit-transform: translateY(20rem);
-	transform: translateY(20rem);
+	-webkit-transform: translateY(40rem);
+	transform: translateY(40rem);
 }
 .showUpLong.go {
 	-webkit-animation-name: showUpLong;
