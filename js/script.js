@@ -18,4 +18,10 @@ $(function () {
 			else $(".header").removeClass("sticky");
 		});
 	});
+
+	$(document).ready(function () {
+		setTimeout(function () {
+			$("iframe.payment").attr("src", $("iframe.payment").data("src"));
+		}, 3000);
+	});
 });
