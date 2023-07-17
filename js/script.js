@@ -24,4 +24,9 @@ $(function () {
 			$("iframe.payment").attr("src", $("iframe.payment").data("src"));
 		}, 3000);
 	});
+
+	$("iframe").focus((e) => {
+		e.preventDefault();
+		e.target.focus({preventScroll: true});
+	});
 });
